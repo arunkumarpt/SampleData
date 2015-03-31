@@ -1,8 +1,7 @@
-DROP TABLE `event`;
 
-CREATE TABLE `event` (
+
+CREATE TABLE `Events` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
-  `id` mediumint,
   `heartrate` mediumint default NULL,
   `respiration` mediumint default NULL,
   `bloodpressure_l` mediumint default NULL,
@@ -13,7 +12,7 @@ CREATE TABLE `event` (
   `humidity` mediumint default NULL,
   `Time` varchar(255),
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`id`) REFERENCES userDetails(`id`)
+  FOREIGN KEY (`id`) REFERENCES UserDetails(`id`)
 ) AUTO_INCREMENT=1;
 
 INSERT INTO `event` (`id`,`heartrate`,`respiration`,`bloodpressure_l`,`bloodpressure_h`,`bloodoxygen`,`bodytemp`,`ambiancetemp`,`humidity`,`Time`) VALUES (1,66,5,74,144,1,100,75,95,"2014-11-06 21:30:28");
