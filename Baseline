@@ -2,7 +2,6 @@ DROP TABLE `BaseTable`;
 
 CREATE TABLE `BaseTable` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
-  `id` mediumint,
   `heartrate` mediumint default NULL,
   `respiration` mediumint default NULL,
   `bloodpressure_l` mediumint default NULL,
