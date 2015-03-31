@@ -11,7 +11,7 @@ CREATE TABLE `BaseTable` (
   `ambiancetemp` mediumint default NULL,
   `humidity` mediumint default NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`id`) REFERENCES userDetails(`id`)
+  FOREIGN KEY (`id`) REFERENCES UserDetails(`id`)
 ) AUTO_INCREMENT=1;
 
 INSERT INTO `BaseTable` (`id`,`heartrate`,`respiration`,`bloodpressure_l`,`bloodpressure_h`,`bloodoxygen`,`bodytemp`,`ambiancetemp`,`humidity`) VALUES (1,64,2,83,129,1,100,78,91);
