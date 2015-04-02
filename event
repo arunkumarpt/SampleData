@@ -1,4 +1,5 @@
 
+DROP TABLE `Events`;
 
 CREATE TABLE `Events` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
@@ -11,10 +12,9 @@ CREATE TABLE `Events` (
   `ambiancetemp` mediumint default NULL,
   `humidity` mediumint default NULL,
   `Time` varchar(255),
-  PRIMARY KEY (`id`),
   FOREIGN KEY (`id`) REFERENCES UserDetails(`id`)
-) AUTO_INCREMENT=1;
-
+); 
+select * from Events where id =301;
 
 INSERT INTO `Events` (`id`,`heartrate`,`respiration`,`bloodpressure_l`,`bloodpressure_h`,`bloodoxygen`,`bodytemp`,`ambiancetemp`,`humidity`,`Time`) VALUES (1,66,5,74,144,1,100,75,95,"2014-11-06 21:30:28");
 INSERT INTO `Events` (`id`,`heartrate`,`respiration`,`bloodpressure_l`,`bloodpressure_h`,`bloodoxygen`,`bodytemp`,`ambiancetemp`,`humidity`,`Time`) VALUES (2,61,5,85,119,5,98,96,96,"2015-01-01 05:45:16");
